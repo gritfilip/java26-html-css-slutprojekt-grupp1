@@ -15,6 +15,19 @@
     /* Padding räknas in i bredden */
 }
 
+.navbar-brand,
+.footer-brand {
+    padding: var(--padding);
+    display: flex;
+    gap: 10px;
+}
+
+.footer-brand {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--padding);
+}
+
 footer {
     text-align: center;
 }
@@ -39,4 +52,17 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+/* Tablt och uppåt */
+@media (min-width: 768px) {
+    
+    .footer-content {
+        display: flex;
+    }
+    
+    .footer-socials,
+    .footer-contact,
+    .footer-openhours {
+        flex: 1;
+    }
 }
