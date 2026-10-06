@@ -24,10 +24,10 @@
 <body>
     <!-- Navbar importerad ifrån Bootstrap-->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/GritLogo.png" alt="Grit Lyftarna logo">Grit Lyftarna</a>                
+                    <img src="images/GritLogo.png" alt="Grit Lyftarna logo">Grit Lyftarna</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -67,44 +67,108 @@
         </nav>
     </header>
     <main>
+            <!-- Den stora bilden under navbaren -->
+        <img class="banner-pic" src="images/bannerbild.png" alt="Gym med röd neon">
+
         <div class="container">
+            <section class="home">
+                <div class="home-text">
+                    <h1>BYGG STYRKA. BYGG <strong>GRIT</strong></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt mollitia atque deleniti
+                        perspiciatis consectetur temporibus, obcaecati quod</p>
+
+                    <!-- Linkar vi kan styla som knappar -->
+                    <div class="home-buttons">
+                        <a href="gymmet.html">Utforska Gymmet</a>
+                        <a class="member-button" href="medlemskap.html">Bli Medlem</a>
+                    </div>
+                </div>
+
+                <!-- Ingen super bra bild, hittar säkert något bättre sen-->
+                <div class="home-pic">
+                    <img src="images/gym-röd.jpg" alt="Vikt med rött ljus i bakgrunden">
+                </div>
+            </section>
+
+            <section class="gym">
+                <div class="gym-text">
+                <h2>Vårat Gym</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, minus? Natus facilis accusantium culpa
+                    ducimus fugit!</p>
+                </div>
+
+                <!-- Bilderna jag har lagt är inte final, bara hittade något ifrån google-->
+                <div class="gym-container">
+                    <!-- Gör 3 stycken kort/boxar som innehåler lite information -->
+                    <div class="gym-card">
+                        <img src="images/Dumbbell.jpg" alt="hantlar">
+                        <div class="gym-cardtext">
+                            <h3>Fria vikter & maskiner</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+
+                    <div class="gym-card">
+                        <img src="images/condition.jpg" alt="konditions träning">
+                        <div class="gym-cardtext">
+                            <h3>Kondition</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat consectetur quod
+                                molestiae</p>
+                        </div>
+                    </div>
+                    <div class="gym-card">
+                        <img src="images/crossift.jpg" alt="crossift">
+                        <div class="gym-cardtext">
+                            <h3>Crossfit</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat consectetur quod
+                                molestiae</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
 
         </div>
     </main>
 
+    <!-- Samma footer till alla sidor -->
     <footer>
         <div class="container">
             <div class="footer-brand">
                 <img src="images/GritLogo.png" alt="Grit Lyftarna logo">
-            <h3>Grit Lyftarna</h3>
+                <h2>Grit Lyftarna</h2>
             </div>
             <div class="footer-content">
-            <div class="footer-socials">
-                <h3>Hitta oss på våra sociala medier!</h3>
-                <div class="social-icon">
-                    <a href=https://www.instagram.com><img src="images/instagram-logo.png.webp"
-                            alt="instagram logo"></a>
-                    <a href=https://www.facebook.com><img src="images/Facebook_Logo.png" alt="facebook logo"></a>
+                <div class="footer-socials">
+                    <h3>Hitta oss på våra sociala medier!</h3>
+                    <div class="social-icon">
+                        <a href=https://www.instagram.com><img src="images/instagram-logo.png.webp"
+                                alt="instagram logo"></a>
+                        <a href=https://www.facebook.com><img src="images/Facebook_Logo.png" alt="facebook logo"></a>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Kontakta oss!</h3>
+                    <a href="mailto:gritlyftarna@gritacademy.se">gritlyftarna@gritacademy.se</a>
+                    <a href="tel:+0401337">040-1337</a>
+                </div>
+
+                <div class="footer-openhours">
+                    <h3>Öppetider</h3>
+                    <p>Söndag - Fredag: 05:00 - 22:00</p>
+                    <p>Lördag: 05:00 - 24:00</p>
+
+                    <h3>Avvikande öppettider</h3>
+                    <p>Julafton: Stängt</p>
+                    <p>Juldagen: Stängt</p>
+                    <p>Nyårsafton: 08:00 - 16:00</p>
                 </div>
             </div>
-
-            <div class="footer-contact">
-                <h3>Kontakta oss!</h3>
-                <a href="mailto:gritlyftarna@gritacademy.se">gritlyftarna@gritacademy.se</a>
-                <a href="tel:+0401337">040-1337</a>
-            </div>
-
-            <div class="footer-openhours">
-                <h3>Öppetider</h3>
-                <p>Söndag - Fredag: 05:00 - 22:00</p>
-                <p>Lördag: 05:00 - 24:00</p>
-
-                <h3>Avvikande öppettider</h3>
-                <p>Julafton: Stängt</p>
-                <p>Juldagen: Stängt</p>
-                <p>Nyårsafton: 08:00 - 16:00</p>
-            </div>
-        </div>
         </div>
 
 
