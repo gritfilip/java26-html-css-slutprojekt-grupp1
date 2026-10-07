@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 /* Färger vi kan använda på sidan, jag har bara gjort några jag ville ha nu så lägg gärna på, kom inte på några bra namn */
@@ -20,15 +21,53 @@
 }
 
 /* Håller ihop innehållet, ändra helst inte på denna utan att kolla så alla sidor funkar */
+/*
 .container {
     width: 100%;
     padding: var(--padding);
-    box-sizing: border-box;
-    /* Padding räknas in i bredden */
 }
+*/ /* Jag har kommenterat bort denna, läste lite mer om bootstrap och dem har en inbygd container, vi ser vad händer, skrev in denna på ren automatik */
 
+
+/* Skriver över lite av Bootstraps navbar */
 .navbar {
     background-color: var(--dark-red);
+}
+
+.navbar .nav-link.active {
+    color: var(--gold);
+}
+
+.navbar .nav-link {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+.navbar .navbar-brand {
+    color: var(--white);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: var(--gold);
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 15px;
 }
 
 h1,
@@ -64,12 +103,14 @@ strong {
 .home {
     display: flex;
     flex-direction: column;
+    padding-top: var(--padding);
 }
 
 .home-pic img {
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
+    border-radius: 25px;
 }
 
 .home-text {
@@ -81,17 +122,19 @@ strong {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
     padding: var(--padding);
 }
 
 .home-buttons a {
     text-decoration: none;
     color: var(--white);
-    padding: var(--padding);
+    padding: 30px;
+    width: 250px;
+    text-align: center;
     border-radius: 10px;
     background-color: var(--dark-red);
-    transition: 1.5s;
+    transition: 0.5s;
 }
 
 .home-buttons a:hover {
@@ -147,17 +190,13 @@ strong {
 }
 
 /* Footer CSS, samma på alla sidor */
-.navbar-brand,
-.footer-brand {
-    padding: var(--padding);
-    display: flex;
-    gap: 10px;
-}
-
 .footer-brand {
     justify-content: center;
     align-items: center;
     margin-bottom: var(--padding);
+    padding: var(--padding);
+    display: flex;
+    gap: 10px;
 }
 
 footer {
@@ -165,6 +204,7 @@ footer {
     background-color: var(--black);
     color: var(--white);
     border-top: 2px solid var(--dark-red);
+    font-size: 0.8rem;
 }
 
 .social-icon {
@@ -176,7 +216,7 @@ footer {
 .social-icon img {
     width: 50px;
     height: 50px;
-    transition: 1.5s;
+    transition: 0.5s;
 }
 
 .social-icon img:hover {
@@ -194,7 +234,7 @@ footer {
 .footer-contact a {
     text-decoration: none;
     color: var(--white);
-    transition: 1.5s;
+    transition: 0.3s;
 }
 
 .footer-contact a:hover {
@@ -220,10 +260,12 @@ footer h3 {
 
 /* Tablt och uppåt */
 @media (min-width: 768px) {
+    /*
     .container {
         max-width: 1200px;
         margin: 0 auto;
     }
+    */ /* Kommenterade bort denna med pga bootstrap */
 
     /* Index CSS */
     /* Row så det läggs bredvid varandra på större skärmar */
