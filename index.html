@@ -25,7 +25,9 @@
     <!-- Navbar importerad ifrån Bootstrap-->
     <header>
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+            <!-- har ändrat bootstraps "container-fluid", jag la in px-5. Dem har egna css regler man kan skriva direkt in här-->
+             <!-- https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
+            <div class="container-fluid px-5">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/GritLogo.png" alt="Grit Lyftarna logo">Grit Lyftarna</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -33,7 +35,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <!-- Här också, jag la till ms-auto -->
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Hem</a>
                         </li>
@@ -146,9 +149,9 @@
                 <div class="footer-socials">
                     <h3>Hitta oss på våra sociala medier!</h3>
                     <div class="social-icon">
-                        <a href=https://www.instagram.com><img src="images/instagram-logo.png.webp"
+                        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram-logo.png.webp"
                                 alt="instagram logo"></a>
-                        <a href=https://www.facebook.com><img src="images/Facebook_Logo.png" alt="facebook logo"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img src="images/Facebook_Logo.png" alt="facebook logo"></a>
                     </div>
                 </div>
 
@@ -162,11 +165,6 @@
                     <h3>Öppetider</h3>
                     <p>Söndag - Fredag: 05:00 - 22:00</p>
                     <p>Lördag: 05:00 - 24:00</p>
-
-                    <h3>Avvikande öppettider</h3>
-                    <p>Julafton: Stängt</p>
-                    <p>Juldagen: Stängt</p>
-                    <p>Nyårsafton: 08:00 - 16:00</p>
                 </div>
             </div>
         </div>
