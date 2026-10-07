@@ -34,6 +34,10 @@
     background-color: var(--dark-red);
 }
 
+.navbar-toggler {
+    background-color: var(--gold);
+}
+
 .navbar .nav-link.active {
     color: var(--gold);
 }
@@ -50,7 +54,7 @@
 }
 
 .navbar .navbar-brand {
-    color: var(--white);
+    color: var(--gold);
 }
 
 .navbar-brand {
@@ -138,7 +142,7 @@ strong {
 }
 
 .home-buttons a:hover {
-    transform: translateY(-10px);
+    transform:translateY(-10px) 
 }
 
 .home-buttons .member-button {
@@ -146,33 +150,28 @@ strong {
     color: var(--black);
 }
 
+.home-buttons .member-button:hover {
+    transform: scale(1.2);
+}
+
 .gym-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
-    border-top: 1px solid var(--dark-red);
-    padding-top: 30px;
+}
+
+.gym-cardtext {
+    text-align: center;
+    color: var(--white);
+    margin-top: 10px;
 }
 
 .gym-text {
     text-align: center;
 }
 
-/* Gymkorten med text på bilderna */
-.gym-card {
-    position: relative;
-    /* Så att texten ska kunna ligga på bilden */
-}
-
-.gym-cardtext {
-    position: absolute;
-    /* Denna går till relative */
-    bottom: 3px;
-    left: 20px;
-    right: 20px;
-    text-align: center;
-    color: var(--white);
-    font-size: 14px;
+.gym-text span {
+    color: var(--red);
 }
 
 .gym-card img {
@@ -180,8 +179,7 @@ strong {
     height: 150px;
     object-fit: cover;
     border-radius: 15px;
-    filter: brightness(50%);
-    /* Gör bilden mörkare så man kan se texten */
+    border: solid 3px var(--dark-red);
 }
 
 .gym {
@@ -193,7 +191,6 @@ strong {
 .footer-brand {
     justify-content: center;
     align-items: center;
-    margin-bottom: var(--padding);
     padding: var(--padding);
     display: flex;
     gap: 10px;
@@ -202,9 +199,8 @@ strong {
 footer {
     text-align: center;
     background-color: var(--black);
-    color: var(--white);
+    color: var(--dark-red);
     border-top: 2px solid var(--dark-red);
-    font-size: 0.8rem;
 }
 
 .social-icon {
@@ -216,7 +212,7 @@ footer {
 .social-icon img {
     width: 50px;
     height: 50px;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 
 .social-icon img:hover {
@@ -233,7 +229,7 @@ footer {
 
 .footer-contact a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--dark-red);
     transition: 0.3s;
 }
 
@@ -251,15 +247,124 @@ footer h3 {
     font-size: 1rem;
 }
 
+footer h2 {
+    color: var(--red);
+}
+
 .footer-socials,
 .footer-contact,
 .footer-openhours {
+    padding: 10px;
+}
+/* Teamet sidan */
+.team > img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50px;
+    border: solid 5px;
+    border-color: var(--dark-red);
+}
+
+.team h2 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    gap: 20px;
+}
+
+.team-card {
+    border: solid 5px;
+    border-color: var(--dark-red);
+    border-radius: 25px;
+}
+
+.team-card > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50px;
+    border: solid 3px;
+    border-color: var(--dark-red);
+    transition: 0.3s;
+}
+
+.team-card:hover > img {
+    border-color: var(--gold);
+    transform: rotate(1deg) translateY(8px);
+}
+
+.team-card h3 {
+    text-decoration: underline;
+}
+
+.team-cardtext {
+    text-align: center;
+    padding: var(--padding)
+}
+
+.team-cardtext h3 {
+    font-size: 2rem;
+    color: var(--red);
+}
+
+.team-cardtext span {
+    font-size: 1.5rem;
+    color: var(--red);
+}
+
+.team-cardtext a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.3s;
+    width: fit-content;
+    margin: auto;
+}
+
+.team-cardtext a:hover {
+    color: var(--gold);
+}
+
+.team-cardtext a img {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    transition: 1s;
+}
+
+.team-card a img:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.team {
     padding: var(--padding);
 }
 
-
-/* Tablt och uppåt */
+/* Tablet */
 @media (min-width: 768px) {
+    /* Index CSS */
+    .home-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        font-size: 1.2rem;
+    }
+    /* Teamet CSS */
+    .team-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }   
+}
+/* Desktop */
+@media (min-width: 992px) {
     /*
     .container {
         max-width: 1200px;
@@ -287,12 +392,7 @@ footer h3 {
 
     /* Korten läggs bredvid varandra */
     .gym-container {
-        flex-direction: row;
-    }
-
-    .gym-card {
-        flex: 1;
-        /* Ger alla tre kort samma utrymme, så dem blir lika breda */
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     /* Footer CSS */
@@ -306,4 +406,9 @@ footer h3 {
         flex: 1;
     }
 
+    /* Teamet CSS */
+
+    .team-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
