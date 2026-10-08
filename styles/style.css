@@ -20,18 +20,10 @@
     /* Medlemskap */
 }
 
-/* Håller ihop innehållet, ändra helst inte på denna utan att kolla så alla sidor funkar */
-/*
-.container {
-    width: 100%;
-    padding: var(--padding);
-}
-*/ /* Jag har kommenterat bort denna, läste lite mer om bootstrap och dem har en inbygd container, vi ser vad händer, skrev in denna på ren automatik */
-
-
 /* Skriver över lite av Bootstraps navbar */
 .navbar {
     background-color: var(--dark-red);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .navbar-toggler {
@@ -76,8 +68,11 @@
 
 h1,
 h2,
-h3 {
+h3,
+p,
+a {
     font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h2 {
@@ -100,7 +95,7 @@ strong {
 /* Stora bilden under navbaren */
 .banner-pic {
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -142,12 +137,14 @@ strong {
 }
 
 .home-buttons a:hover {
-    transform:translateY(-10px) 
+    transform:translateY(-10px);
+    color: var(--gold); 
 }
 
 .home-buttons .member-button {
     background-color: var(--gold);
     color: var(--black);
+    animation: colorchange 3s ease-in-out infinite;
 }
 
 .home-buttons .member-button:hover {
@@ -158,6 +155,7 @@ strong {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    padding: var(--padding);
 }
 
 .gym-cardtext {
@@ -167,6 +165,7 @@ strong {
 }
 
 .gym-text {
+    padding-top: var(--padding);
     text-align: center;
 }
 
@@ -185,6 +184,102 @@ strong {
 .gym {
     padding-top: var(--padding);
     padding-bottom: var(--padding);
+}
+
+/* Slider/karusell */
+/* Credit till "slaying the dragon på youtube" */
+/* Bilderna är 100px breda så -100px gör att hela bilden åker utanför rutan till vänster */
+@keyframes scrollLeft {
+    to { left: -100px; }
+}
+
+.partner-container h2{
+    margin-top: 30px;
+    color: var(--gold);
+    text-decoration: underline;
+
+}
+
+/* Rutan till bilderna */
+.partner-slider {
+    margin-top: 20px;
+    position: relative; /* Referenspunkt för absolute i partner */
+    height: 100px;
+    overflow: hidden; /* Döljer det som är utanför */
+}
+
+/* Inställningarna för bilderna */
+.partner{
+    position: absolute;
+    left: 600px; /* Bilderna börjar 600px från vänster. Testade 100% först men då hamnade bilderna för nära varandra på mobil, Men det funkar bra i tablet */
+    animation-name: scrollLeft; /* Keyframen som döptes till scrollLeft */
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.partner img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* calc räknar ut hur långt in i animationen varje bild ska börja */
+/* 30 sekunder delas på 6 bilder så det blir 5 sekunders skillnad */
+/* Negativa tider gör att bilderna redan har kommit olika långt när sidan laddas */
+/* Annars hade alla bilder börjat samtidigt och legat på varandra */
+/* Om animationstiden som är bestämmd i partner ändras behöver tiden i uträkningarna också ändras */
+
+/* Mycket kommentarer för att lättare förstå och kunna använda samma lösning igen i framtiden */
+.card1 {
+    animation-delay: calc(30s / 6 * (6 - 1) * -1); /* 30 / 6 * 5 * -1 = -25 sekunder */
+}
+
+.card2 {
+    animation-delay: calc(30s / 6 * (6 - 2) * -1); /* 30 / 6 * 4 * -1 = -20 sekunder */
+}
+
+.card3 {
+    animation-delay: calc(30s / 6 * ( 6 - 3) * -1);
+}
+
+.card4 {
+    animation-delay: calc(30s / 6 * ( 6 - 4) * -1);
+}
+
+.card5 {
+    animation-delay: calc(30s / 6 * ( 6 - 5) * -1);
+}
+
+.card6 {
+    animation-delay: calc(30s / 6 * ( 6 - 6) * -1);
+}
+
+/* Information till samarbetspartner */
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.partner-info {
+    border: solid var(--dark-red);
+    text-align: center;
+    border-radius: 25px;
+    padding: 3px;
+}
+
+.partner-info h3 {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: var(--gold);
+}
+
+.partner-info p {
+    font-size: 0.8rem;
 }
 
 /* Footer CSS, samma på alla sidor */
@@ -257,7 +352,7 @@ footer h2 {
     padding: 10px;
 }
 /* Teamet sidan */
-.team > img {
+.team picture img {
     width: 100%;
     height: 350px;
     object-fit: cover;
@@ -266,9 +361,10 @@ footer h2 {
     border-color: var(--dark-red);
 }
 
-.team h2 {
+.team h1 {
     margin-top: 20px;
-    font-size: 2.5rem;
+    text-align: center;
+    animation: pulse 3s ease-in-out infinite;
 }
 
 .team-container {
@@ -348,6 +444,60 @@ footer h2 {
     padding: var(--padding);
 }
 
+/* Ligger kategorier här, bara stapla in i dem */
+@media (prefers-reduced-motion: reduce) {
+
+/* Slidern */
+    .partner {
+        animation: none;
+        position: static;
+    }
+
+    /* Gör alla partner bilder till en grid istället */
+    .partner-slider {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow: visible;
+        height: auto;
+        justify-items: center;
+    }
+
+/* Animationer */
+    .team h1,
+    .home-buttons .member-button {
+        animation: none;
+    }
+
+/* Transform */
+    .home-buttons a:hover,
+    .home-buttons .member-button:hover,
+    .team-card:hover > img,
+    .team-card a img:hover,
+    .social-icon img:hover {
+        transform: none;
+    }
+
+/* Transition */
+    .home-buttons a,
+    .team-card > img,
+    .team-cardtext a img,
+    .social-icon img {
+        transition: none;
+    }
+
+}
+
+/* Keyframes animationer */
+@keyframes colorchange {
+    0%, 100%{ background-color: var(--gold);}
+    50% { background-color: var(--dark-red);}
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1);}
+    50% { transform: scale(1.2);}
+}
+
 /* Tablet */
 @media (min-width: 768px) {
     /* Index CSS */
@@ -357,21 +507,23 @@ footer h2 {
         gap: 50px;
         font-size: 1.2rem;
     }
+
+    .gym-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    /* Här är slidern igen fast med start 100% från vänster */
+    .partner {
+        left: 100%;
+    }
+
     /* Teamet CSS */
     .team-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }   
+    }
 }
 /* Desktop */
 @media (min-width: 992px) {
-    /*
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    */ /* Kommenterade bort denna med pga bootstrap */
-
     /* Index CSS */
     /* Row så det läggs bredvid varandra på större skärmar */
     .home {
@@ -392,7 +544,14 @@ footer h2 {
 
     /* Korten läggs bredvid varandra */
     .gym-container {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .partner-grid {
+        grid-template-columns: repeat(6, 1fr);
+        width: 70%;
+        margin: auto;
+        margin-top: 20px;
     }
 
     /* Footer CSS */
