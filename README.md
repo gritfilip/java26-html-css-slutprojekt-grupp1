@@ -58,4 +58,3 @@ Sponsorslidern visas då som vanliga bilder istället för att röra sig.
 Vi har även använt <picture> på teamet-sidan för att anpassa bilderna efter skärmstorleken.
 
 När hemsidan är färdig ska vi testa tangentbordsnavigation, kontrast, 150 % zoom och minskad rörelse på våra sidor.
-Vi kommer även skriva här om vi hittar något som behöver rättas.
