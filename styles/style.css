@@ -8,17 +8,28 @@
 :root {
     --padding: 20px;
     /* Gjorde en padding 20px, tycker den är rätt bra att använda */
-    --black: #101012;
-    /* Sidans bakgrund */
     --red: #ff3b3f;
     /* Knappar */
     --dark-red: #7d2428;
     /* Mörkare röd */
-    --white: #f5f5f5;
-    /* Text */
     --gold: #daa520;
     /* Medlemskap */
+    --white: #ffffff;
+    --black: #101012;
 }
+
+/* Ljust tema */
+[data-bs-theme="light"] {
+    --background: #ffffff;
+    --text: #101012;
+}
+
+/* Mörkt tema */
+[data-bs-theme="dark"] {
+    --background: #101012;
+    --text: #f5f5f5;
+}
+
 
 /* Skriver över lite av Bootstraps navbar */
 .navbar {
@@ -77,12 +88,12 @@ a {
 
 h2 {
     text-align: center;
-    color: var(--white);
+    color: var(--text);
 }
 
 body {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--background);
+    color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -137,8 +148,8 @@ strong {
 }
 
 .home-buttons a:hover {
-    transform:translateY(-10px);
-    color: var(--gold); 
+    transform: translateY(-10px);
+    color: var(--gold);
 }
 
 .home-buttons .member-button {
@@ -160,7 +171,7 @@ strong {
 
 .gym-cardtext {
     text-align: center;
-    color: var(--white);
+    color: var(--text);
     margin-top: 10px;
 }
 
@@ -190,10 +201,12 @@ strong {
 /* Credit till "slaying the dragon på youtube" */
 /* Bilderna är 100px breda så -100px gör att hela bilden åker utanför rutan till vänster */
 @keyframes scrollLeft {
-    to { left: -100px; }
+    to {
+        left: -100px;
+    }
 }
 
-.partner-container h2{
+.partner-container h2 {
     margin-top: 30px;
     color: var(--gold);
     text-decoration: underline;
@@ -203,16 +216,20 @@ strong {
 /* Rutan till bilderna */
 .partner-slider {
     margin-top: 20px;
-    position: relative; /* Referenspunkt för absolute i partner */
+    position: relative;
+    /* Referenspunkt för absolute i partner */
     height: 100px;
-    overflow: hidden; /* Döljer det som är utanför */
+    overflow: hidden;
+    /* Döljer det som är utanför */
 }
 
 /* Inställningarna för bilderna */
-.partner{
+.partner {
     position: absolute;
-    left: 600px; /* Bilderna börjar 600px från vänster. Testade 100% först men då hamnade bilderna för nära varandra på mobil, Men det funkar bra i tablet */
-    animation-name: scrollLeft; /* Keyframen som döptes till scrollLeft */
+    left: 600px;
+    /* Bilderna börjar 600px från vänster. Testade 100% först men då hamnade bilderna för nära varandra på mobil, Men det funkar bra i tablet */
+    animation-name: scrollLeft;
+    /* Keyframen som döptes till scrollLeft */
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -233,27 +250,29 @@ strong {
 
 /* Mycket kommentarer för att lättare förstå och kunna använda samma lösning igen i framtiden */
 .card1 {
-    animation-delay: calc(30s / 6 * (6 - 1) * -1); /* 30 / 6 * 5 * -1 = -25 sekunder */
+    animation-delay: calc(30s / 6 * (6 - 1) * -1);
+    /* 30 / 6 * 5 * -1 = -25 sekunder */
 }
 
 .card2 {
-    animation-delay: calc(30s / 6 * (6 - 2) * -1); /* 30 / 6 * 4 * -1 = -20 sekunder */
+    animation-delay: calc(30s / 6 * (6 - 2) * -1);
+    /* 30 / 6 * 4 * -1 = -20 sekunder */
 }
 
 .card3 {
-    animation-delay: calc(30s / 6 * ( 6 - 3) * -1);
+    animation-delay: calc(30s / 6 * (6 - 3) * -1);
 }
 
 .card4 {
-    animation-delay: calc(30s / 6 * ( 6 - 4) * -1);
+    animation-delay: calc(30s / 6 * (6 - 4) * -1);
 }
 
 .card5 {
-    animation-delay: calc(30s / 6 * ( 6 - 5) * -1);
+    animation-delay: calc(30s / 6 * (6 - 5) * -1);
 }
 
 .card6 {
-    animation-delay: calc(30s / 6 * ( 6 - 6) * -1);
+    animation-delay: calc(30s / 6 * (6 - 6) * -1);
 }
 
 /* Information till samarbetspartner */
@@ -293,7 +312,7 @@ strong {
 
 footer {
     text-align: center;
-    background-color: var(--black);
+    background-color: var(--background);
     color: var(--dark-red);
     border-top: 2px solid var(--dark-red);
 }
@@ -351,6 +370,7 @@ footer h2 {
 .footer-openhours {
     padding: 10px;
 }
+
 /* Teamet sidan */
 .team picture img {
     width: 100%;
@@ -380,7 +400,7 @@ footer h2 {
     border-radius: 25px;
 }
 
-.team-card > img {
+.team-card>img {
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -390,7 +410,7 @@ footer h2 {
     transition: 0.3s;
 }
 
-.team-card:hover > img {
+.team-card:hover>img {
     border-color: var(--gold);
     transform: rotate(1deg) translateY(8px);
 }
@@ -418,7 +438,7 @@ footer h2 {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color: var(--white);
+    color: var(--text);
     transition: 0.3s;
     width: fit-content;
     margin: auto;
@@ -447,7 +467,7 @@ footer h2 {
 /* Ligger kategorier här, bara stapla in i dem */
 @media (prefers-reduced-motion: reduce) {
 
-/* Slidern */
+    /* Slidern */
     .partner {
         animation: none;
         position: static;
@@ -462,24 +482,24 @@ footer h2 {
         justify-items: center;
     }
 
-/* Animationer */
+    /* Animationer */
     .team h1,
     .home-buttons .member-button {
         animation: none;
     }
 
-/* Transform */
+    /* Transform */
     .home-buttons a:hover,
     .home-buttons .member-button:hover,
-    .team-card:hover > img,
+    .team-card:hover>img,
     .team-card a img:hover,
     .social-icon img:hover {
         transform: none;
     }
 
-/* Transition */
+    /* Transition */
     .home-buttons a,
-    .team-card > img,
+    .team-card>img,
     .team-cardtext a img,
     .social-icon img {
         transition: none;
@@ -489,17 +509,32 @@ footer h2 {
 
 /* Keyframes animationer */
 @keyframes colorchange {
-    0%, 100%{ background-color: var(--gold);}
-    50% { background-color: var(--dark-red);}
+
+    0%,
+    100% {
+        background-color: var(--gold);
+    }
+
+    50% {
+        background-color: var(--dark-red);
+    }
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1);}
-    50% { transform: scale(1.2);}
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 /* Tablet */
 @media (min-width: 768px) {
+
     /* Index CSS */
     .home-buttons {
         flex-direction: row;
@@ -511,6 +546,7 @@ footer h2 {
     .gym-container {
         grid-template-columns: repeat(4, 1fr);
     }
+
     /* Här är slidern igen fast med start 100% från vänster */
     .partner {
         left: 100%;
@@ -522,8 +558,10 @@ footer h2 {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 /* Desktop */
 @media (min-width: 992px) {
+
     /* Index CSS */
     /* Row så det läggs bredvid varandra på större skärmar */
     .home {
@@ -568,6 +606,6 @@ footer h2 {
     /* Teamet CSS */
 
     .team-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
