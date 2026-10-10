@@ -151,12 +151,12 @@
 
 .skip-link {
     position: fixed;
-    top: 1000px;
+    top: -100px;
     left: 10px;
     font-size: 1.5rem;
     z-index: 1000;
      color: black;
-     padding: var();
+     padding: var(--padding);
      background-color: var(--gold);
 }
 
@@ -169,7 +169,6 @@ h2,
 h3,
 p,
 a {
-    font-family: "Arial Black", Arial, Helvetica, sans-serif;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -181,7 +180,6 @@ h2 {
 body {
     background-color: var(--background);
     color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 strong {
@@ -212,6 +210,16 @@ strong {
 
 .home-text {
     text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.home-text h1 {
+    font-size: 2.5rem;
 }
 
 /* Knapparna på startsidan */
@@ -262,13 +270,24 @@ strong {
     margin-top: 10px;
 }
 
+.gym-cardtext a {
+    text-decoration: none;
+    color: var(--text);
+}
+
 .gym-text {
     padding-top: var(--padding);
     text-align: center;
+    letter-spacing: 0.5px;
 }
 
-.gym-text span {
-    color: var(--red);
+.gym-text p {
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.gym-text h2 {
+    font-size: 2.5rem;
 }
 
 .gym-card img {
@@ -365,7 +384,7 @@ strong {
 /* Information till samarbetspartner */
 .partner-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     width: 80%;
     margin: auto;
     margin-top: 20px;
@@ -380,12 +399,8 @@ strong {
 
 .partner-info h3 {
     margin-top: 5px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--gold);
-}
-
-.partner-info p {
-    font-size: 0.8rem;
 }
 
 /* Footer CSS, samma på alla sidor */
@@ -502,19 +517,16 @@ footer h2 {
     transform: rotate(2deg) translateY(10px) scale(1.1);
 }
 
-.team-card h3 {
+.team-card h2 {
     text-decoration: underline;
+    font-size: 2rem;
+    color: var(--red);
 }
 
 .team-cardtext {
     text-align: center;
     padding: var(--padding);
     letter-spacing: 0.5px;
-}
-
-.team-cardtext h3 {
-    font-size: 2rem;
-    color: var(--red);
 }
 
 .team-cardtext span {
@@ -643,8 +655,9 @@ dessa är till för minskad rörelse */
         font-size: 1.2rem;
     }
 
+    /* Två kolumner på tablet */
     .gym-container {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* Här är slidern igen fast med start 100% från vänster */
@@ -653,10 +666,17 @@ dessa är till för minskad rörelse */
     }
 
     /* Teamet CSS */
+
+    /* Två kolumner på tablet */
     .team-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Två kolumner på tablet */
+    .partner-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
 }
 
 /* Desktop */
@@ -685,8 +705,9 @@ dessa är till för minskad rörelse */
         grid-template-columns: repeat(4, 1fr);
     }
 
+/* Tre kolumner på desktop */
     .partner-grid {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         width: 70%;
         margin: auto;
         margin-top: 20px;
