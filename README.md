@@ -43,18 +43,31 @@ På mobil använder vi Bootstraps hamburgarmeny.
 
 dark mode/Light mode:
 
-Vi kommer använda Bootstrap tillsammans med egen CSS för att få light och dark mode att fungera.
+Vi har använt Bootstrap tillsammans med egen CSS för att få light och dark mode att fungera.
 
 Bilder och ikoner:
 
 Bilderna på hemsidan är hämtade via Google och skapade med chatgpt.
+Ikoner från Feather Icons: https://feathericons.com/
 
 Kända problem:
 
 Tillgänglighetstester:
 
-Vi har lagt till reducedmotion så att animationerna minskas om användaren har valt det i sina inställningar.
-Sponsorslidern visas då som vanliga bilder istället för att röra sig.
-Vi har även använt <picture> på teamet-sidan för att anpassa bilderna efter skärmstorleken.
+Har testat tillgängligheten på index.html och teamet.html.
 
-När hemsidan är färdig ska vi testa tangentbordsnavigation, kontrast, 150 % zoom och minskad rörelse på våra sidor.
+Tangentbord: Testat tab, shift + Tab och enter. Man kan ta sig runt på hemsidan med hjälp av detta och allt fungerar att trycka på. Hamburgaremeny öppnar sig osv och länkar fungerar.
+
+Hoppa till innehåll: Har skapat en "skip-link" som är det första som kommer fram när man trycket tab och trycker man enter tar den en till main.
+
+150 % zoom: Har testat båda sidorna och allt går fortfarande att läsa och använda.
+
+Kontrast: Testat med Chrome Devtools i både dark mode och light mode. Fick ändra några röda och guldfärgade färger för att klara contrast ratio enligt WCAG AA.
+https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html
+https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
+
+Minskad rörelse: Har lagt till reduced motion och testat med Chrome Devtools. Animationerna stängs av om användaren har valt att ha minskad rörelse.
+
+Sponsorslidern: Vid minskad rörelse visas bilderna som vanliga bilder istället för att röra sig.
+
+Bilder: Har använt <picture> på teamet-sidan för att anpassa bilderna efter skärmstorleken. Vid ändring från mobile till tablet och uppåt kommer en annan bild.
