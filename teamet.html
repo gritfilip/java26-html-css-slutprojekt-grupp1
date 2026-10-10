@@ -53,7 +53,7 @@
           <div
             class="btn-group"
             role="group"
-            aria-label="Basic radio toggle button group"
+            aria-label="Välj mörkt eller ljust läge"
           >
             <input
               type="radio"
@@ -61,6 +61,7 @@
               name="btnradio"
               id="btnradio1"
               data-bs-theme-value="dark"
+              aria-label="Mörkt läge"
               autocomplete="off"
             />
             <label class="btn btn-outline-primary" for="btnradio1"
@@ -73,10 +74,24 @@
               name="btnradio"
               id="btnradio2"
               data-bs-theme-value="light"
+              aria-label="Ljust läge"
               autocomplete="off"
             />
             <label class="btn btn-outline-primary" for="btnradio2"
               ><i data-feather="sun"></i
+            ></label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio3"
+              data-bs-theme-value="auto"
+              aria-label="System läge"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio3"
+              ><i data-feather="monitor"></i
             ></label>
           </div>
 
@@ -95,9 +110,7 @@
             <!-- Här också, jag la till ms-auto -->
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html"
-                  >Hem</a
-                >
+                <a class="nav-link" href="index.html">Hem</a>
               </li>
 
               <li class="nav-item">
@@ -117,7 +130,12 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="teamet.html">Teamet</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="teamet.html"
+                  >Teamet</a
+                >
               </li>
 
               <li class="nav-item">
@@ -145,66 +163,134 @@
           <h1>Möt Teamet</h1>
           <div class="team-container">
             <div class="team-card">
-              <img src="images/gymägare.png" alt="Gym ägare" />
+              <img src="images/gymägare.png" alt="Robin Gym ägare" />
               <article class="team-cardtext">
                 <h3>Robin</h3>
                 <span>Chefen</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="mailto:robin@gritacademy.se">Robin@gritlyftarna.se</a>
-                <a href="tel:+">099</a>
-                <a href="https://www.instagram.com" target="_blank"
-                  ><img
+                <p>
+                  Robin ansvarar för gymmets verksamhet och ser till att alla
+                  medlemmar får en bra träningsupplevelse.
+                </p>
+                <!-- aria-label för skärmläsare -->
+                <a href="mailto:robin@gritacademy.se" aria-label="Mejla Robin">
+                  <i data-feather="mail"></i>Mejl
+                </a>
+                <a
+                  href="tel:+0401337"
+                  aria-label="Ring Robin via gymmets telefon"
+                >
+                  <i data-feather="phone"></i>Telefon
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Besök Robins Instagram"
+                >
+                  <img
                     src="images/instagram-logo.png.webp"
-                    alt="instagram logo"
-                /></a>
+                    alt="instagram-logo"
+                  />
+                </a>
               </article>
             </div>
 
             <div class="team-card">
-              <img src="images/gymägare.png" alt="Gym arbetare" />
+              <img src="images/gymägare.png" alt="Filip Gym arbetare" />
               <article class="team-cardtext">
                 <h3>Filip</h3>
                 <span>Gym Arbetare</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="mailto:filip@gritacademy.se">Filip@gritlyftarna.se</a>
-                <a href="tel:+">043</a>
-                <a href="https://www.instagram.com" target="_blank"
-                  ><img
+                <p>
+                  Filip hjälper medlemmarna i gymmet och ser till att lokalerna
+                  och utrustningen är i toppskick.
+                </p>
+                <!-- aria-label för skärmläsare -->
+                <a href="mailto:filip@gritacademy.se" aria-label="Mejla Filip">
+                  <i data-feather="mail"></i>Mejl
+                </a>
+                <a
+                  href="tel:+0401337"
+                  aria-label="Ring Filip via gymmets telefon"
+                >
+                  <i data-feather="phone"></i>Telefon
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Besök Filips Instagram"
+                >
+                  <img
                     src="images/instagram-logo.png.webp"
-                    alt="instagram logo"
-                /></a>
+                    alt="instagram-logo"
+                  />
+                </a>
               </article>
             </div>
 
             <div class="team-card">
-              <img src="images/gymägare.png" alt="Gym PT" />
+              <img src="images/gymägare.png" alt="Ivan Gym PT" />
               <article class="team-cardtext">
                 <h3>Ivan</h3>
                 <span>Personlig Tränare</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="mailto:ivan@gritacademy.se">Ivan@gritlyftarna.se</a>
-                <a href="tel:+">076</a>
-                <a href="https://www.instagram.com" target="_blank"
-                  ><img
+                <p>
+                  Ivan hjälper dig att nå dina träningsmål med personlig
+                  vägledning och anpassade träningsprogram.
+                </p>
+                <!-- aria-label för skärmläsare -->
+                <a href="mailto:ivan@gritacademy.se" aria-label="Mejla Ivan">
+                  <i data-feather="mail"></i>Mejl
+                </a>
+                <a
+                  href="tel:+0401337"
+                  aria-label="Ring Ivan via gymmets telefon"
+                >
+                  <i data-feather="phone"></i>Telefon
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Besök Ivans Instagram"
+                >
+                  <img
                     src="images/instagram-logo.png.webp"
-                    alt="instagram logo"
-                /></a>
+                    alt="instagram-logo"
+                  />
+                </a>
               </article>
             </div>
 
             <div class="team-card">
-              <img src="images/gymägare.png" alt="Gym PT" />
+              <img src="images/gymägare.png" alt="Baha Gym PT" />
               <article class="team-cardtext">
                 <h3>Baha</h3>
                 <span>Personlig Tränare</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="mailto:baha@gritacademy.se">Baha@gritlyftarna.se</a>
-                <a href="tel:+">032</a>
-                <a href="https://www.instagram.com" target="_blank"
-                  ><img
+                <p>
+                  Baha brinner för styrketräning och hjälper dig att utvecklas
+                  med rätt teknik och motivation.
+                </p>
+                <!-- aria-label för skärmläsare -->
+                <a href="mailto:baha@gritacademy.se" aria-label="Mejla Baha">
+                  <i data-feather="mail"></i>Mejl
+                </a>
+                <a
+                  href="tel:+0401337"
+                  aria-label="Ring Baha via gymmets telefon"
+                >
+                  <i data-feather="phone"></i>Telefon
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Besök Bahas Instagram"
+                >
+                  <img
                     src="images/instagram-logo.png.webp"
-                    alt="instagram logo"
-                /></a>
+                    alt="instagram-logo"
+                  />
+                </a>
               </article>
             </div>
           </div>
@@ -222,7 +308,7 @@
           <div class="footer-socials">
             <h3>Hitta oss på våra sociala medier!</h3>
             <div class="social-icon">
-              <a href="https://www.instagram.com" target="_blank"
+              <a href="https://www.instagram.com" target="_blank" rel="noopener"
                 ><img src="images/instagram-logo.png.webp" alt="instagram logo"
               /></a>
               <a href="https://www.facebook.com" target="_blank"
