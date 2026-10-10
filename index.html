@@ -20,7 +20,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    
+
     <!-- Våran CSS -->
     <link rel="stylesheet" href="styles/style.css" />
   </head>
@@ -28,9 +28,13 @@
   <body>
     <!-- Navbar importerad ifrån Bootstrap-->
     <header>
-      <nav class="navbar navbar-expand-lg">
+      <!-- navbar-expand-xl gör att hamburgermenyn visas under 1200px.
+     Jag ändrade från lg (992px) till xl (1200px) eftersom våra länkar
+     inte fick plats på mindre skärmar och började staplas på varandra. -->
+      <nav class="navbar navbar-expand-xl">
         <!-- har ändrat bootstraps "container-fluid", jag la in px-5. Dem har egna css regler man kan skriva direkt in här-->
         <!-- https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
+        <!-- px-5 ger padding på vänster och höger sida -->
         <div class="container-fluid px-5">
           <a class="navbar-brand" href="index.html">
             <img src="images/GritLogo.png" alt="Grit Lyftarna logo" />Grit
@@ -47,6 +51,38 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- Bootstrap dark/light mode -->
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio1"
+              data-bs-theme-value="dark"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio1"
+              ><i data-feather="moon"></i
+            ></label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio2"
+              data-bs-theme-value="light"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio2"
+              ><i data-feather="sun"></i
+            ></label>
+          </div>
+
           <div class="collapse navbar-collapse" id="navbarNav">
             <!-- Här också, jag la till ms-auto -->
             <ul class="navbar-nav ms-auto">
@@ -80,68 +116,6 @@
                 <a class="nav-link" href="jobba.html">Jobba hos oss</a>
               </li>
             </ul>
-
-            <!-- Bootstrap dark/light mode -->
-            <div class="dropdown ms-lg-3">
-              <button
-                class="btn btn-warning dropdown-toggle"
-                type="button"
-                id="bd-theme"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                aria-label="Välj tema"
-              >
-                <svg class="theme-icon-active" width="16" height="16">
-                  <use href="#circle-half"></use>
-                </svg>
-
-                <span id="bd-theme-text">Tema</span>
-              </button>
-
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="bd-theme"
-              >
-                <li>
-                  <button
-                    class="dropdown-item"
-                    type="button"
-                    data-bs-theme-value="light"
-                  >
-                    <svg width="16" height="16">
-                      <use href="#sun-fill"></use>
-                    </svg>
-                    Ljust
-                  </button>
-                </li>
-
-                <li>
-                  <button
-                    class="dropdown-item"
-                    type="button"
-                    data-bs-theme-value="dark"
-                  >
-                    <svg width="16" height="16">
-                      <use href="#moon-stars-fill"></use>
-                    </svg>
-                    Mörkt
-                  </button>
-                </li>
-
-                <li>
-                  <button
-                    class="dropdown-item"
-                    type="button"
-                    data-bs-theme-value="auto"
-                  >
-                    <svg width="16" height="16">
-                      <use href="#circle-half"></use>
-                    </svg>
-                    System
-                  </button>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </nav>
@@ -345,5 +319,10 @@
     ></script>
     <!-- Bootstrap JS för Dark/Light mode-->
     <script src="js/bootstrap-color-mode.js"></script>
+    <!-- Script för feather ikoner till Dark/Light -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="sv" data-bs-theme="dark">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -12,152 +11,168 @@
     <title>Grit Lyftarna │ Kundservice</title>
 
     <!-- Favicon -->
-     <link rel="icon" type="image/png" href="images/GritLogo.png" />
+    <link rel="icon" type="image/png" href="images/GritLogo.png" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <!-- Våran CSS -->
     <link rel="stylesheet" href="styles/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar importerad ifrån Bootstrap-->
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <!-- har ändrat bootstraps "container-fluid", jag la in px-5. Dem har egna css regler man kan skriva direkt in här-->
-             <!-- https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
-            <div class="container-fluid px-5">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/GritLogo.png" alt="Grit Lyftarna logo">Grit Lyftarna</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <!-- Här också, jag la till ms-auto -->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Hem</a>
-                        </li>
+      <!-- navbar-expand-xl gör att hamburgermenyn visas under 1200px.
+     Jag ändrade från lg (992px) till xl (1200px) eftersom våra länkar
+     inte fick plats på mindre skärmar och började staplas på varandra. -->
+      <nav class="navbar navbar-expand-xl">
+        <!-- har ändrat bootstraps "container-fluid", jag la in px-5. Dem har egna css regler man kan skriva direkt in här-->
+        <!-- https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
+        <!-- px-5 ger padding på vänster och höger sida -->
+        <div class="container-fluid px-5">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/GritLogo.png" alt="Grit Lyftarna logo" />Grit
+            Lyftarna</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="medlemskap.html">Medlemskap</a>
-                        </li>
+          <!-- Bootstrap dark/light mode -->
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio1"
+              data-bs-theme-value="dark"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio1"
+              ><i data-feather="moon"></i
+            ></label>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="gymmet.html">Gymmet</a>
-                        </li>
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio2"
+              data-bs-theme-value="light"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btnradio2"
+              ><i data-feather="sun"></i
+            ></label>
+          </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="tjänster.html">Tjänster</a>
-                        </li>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Här också, jag la till ms-auto -->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Hem</a
+                >
+              </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="kundservice.html">Kundservice</a>
-                        </li>
+              <li class="nav-item">
+                <a class="nav-link" href="medlemskap.html">Medlemskap</a>
+              </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="teamet.html">Teamet</a>
-                        </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gymmet.html">Gymmet</a>
+              </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="jobba.html">Jobba hos oss</a>
-                        </li>
-                    </ul>
-                    <div class="dropdown ms-lg-3">
-    <button
-        class="btn btn-warning dropdown-toggle"
-        type="button"
-        id="bd-theme"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-        aria-label="Välj tema">
+              <li class="nav-item">
+                <a class="nav-link" href="tjänster.html">Tjänster</a>
+              </li>
 
-        <svg class="theme-icon-active" width="16" height="16">
-            <use href="#circle-half"></use>
-        </svg>
+              <li class="nav-item">
+                <a class="nav-link active" href="kundservice.html"
+                  >Kundservice</a
+                >
+              </li>
 
-        <span id="bd-theme-text">Tema</span>
-    </button>
+              <li class="nav-item">
+                <a class="nav-link" href="teamet.html">Teamet</a>
+              </li>
 
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme">
-        <li>
-            <button class="dropdown-item" type="button" data-bs-theme-value="light">
-                <svg width="16" height="16">
-                    <use href="#sun-fill"></use>
-                </svg>
-                Ljust
-            </button>
-        </li>
-
-        <li>
-            <button class="dropdown-item" type="button" data-bs-theme-value="dark">
-                <svg width="16" height="16">
-                    <use href="#moon-stars-fill"></use>
-                </svg>
-                Mörkt
-            </button>
-        </li>
-
-        <li>
-            <button class="dropdown-item" type="button" data-bs-theme-value="auto">
-                <svg width="16" height="16">
-                    <use href="#circle-half"></use>
-                </svg>
-                System
-            </button>
-        </li>
-    </ul>
-</div>
-                </div>
-            </div>
-        </nav>
+              <li class="nav-item">
+                <a class="nav-link" href="jobba.html">Jobba hos oss</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <div class="container">
-
-        </div>
+      <div class="container"></div>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-brand">
-                <img src="images/GritLogo.png" alt="Grit Lyftarna logo">
-            <h2>Grit Lyftarna</h2>
-            </div>
-            <div class="footer-content">
-            <div class="footer-socials">
-                <h3>Hitta oss på våra sociala medier!</h3>
-                <div class="social-icon">
-                    <a href="https://www.instagram.com" target="_blank"><img src="images/instagram-logo.png.webp"
-                            alt="instagram logo"></a>
-                    <a href="https://www.facebook.com" target="_blank"><img src="images/Facebook_Logo.png" alt="facebook logo"></a>
-                </div>
-            </div>
-           
-            <div class="footer-contact">
-                <h3>Kontakta oss!</h3>
-                <a href="mailto:gritlyftarna@gritacademy.se">gritlyftarna@gritacademy.se</a>
-                <a href="tel:+0401337">040-1337</a>
-            </div>
-
-            <div class="footer-openhours">
-                <h3>Öppetider</h3>
-                <p>Söndag - Fredag: 05:00 - 22:00</p>
-                <p>Lördag: 05:00 - 24:00</p>
-            </div>
+      <div class="container">
+        <div class="footer-brand">
+          <img src="images/GritLogo.png" alt="Grit Lyftarna logo" />
+          <h2>Grit Lyftarna</h2>
         </div>
- </div>
+        <div class="footer-content">
+          <div class="footer-socials">
+            <h3>Hitta oss på våra sociala medier!</h3>
+            <div class="social-icon">
+              <a href="https://www.instagram.com" target="_blank"
+                ><img src="images/instagram-logo.png.webp" alt="instagram logo"
+              /></a>
+              <a href="https://www.facebook.com" target="_blank"
+                ><img src="images/Facebook_Logo.png" alt="facebook logo"
+              /></a>
+            </div>
+          </div>
 
+          <div class="footer-contact">
+            <h3>Kontakta oss!</h3>
+            <a href="mailto:gritlyftarna@gritacademy.se"
+              >gritlyftarna@gritacademy.se</a
+            >
+            <a href="tel:+0401337">040-1337</a>
+          </div>
+
+          <div class="footer-openhours">
+            <h3>Öppetider</h3>
+            <p>Söndag - Fredag: 05:00 - 22:00</p>
+            <p>Lördag: 05:00 - 24:00</p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <!-- Bootstrap JS för Dark/Light mode-->
     <script src="js/bootstrap-color-mode.js"></script>
-</body>
-
+    <!-- Script för feather ikoner till Dark/Light -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>
