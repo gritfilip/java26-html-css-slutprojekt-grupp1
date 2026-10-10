@@ -25,6 +25,8 @@
   </head>
 
   <body>
+    <!-- Link för at kunna hoppa till main-->
+    <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
     <!-- Navbar importerad ifrån Bootstrap-->
     <header>
       <!-- navbar-expand-xl gör att hamburgermenyn visas under 1200px.
@@ -33,7 +35,7 @@
       <nav class="navbar navbar-expand-xl">
         <!-- har ändrat bootstraps "container-fluid", jag la in px-5. Dem har egna css regler man kan skriva direkt in här-->
         <!-- https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
-         <!-- px-5 ger padding på vänster och höger sida -->
+        <!-- px-5 ger padding på vänster och höger sida -->
         <div class="container-fluid px-5">
           <a class="navbar-brand" href="index.html">
             <img src="images/GritLogo.png" alt="Grit Lyftarna logo" />Grit
@@ -119,7 +121,8 @@
         </div>
       </nav>
     </header>
-    <main>
+    <!-- Hit man hoppar med linken -->
+    <main id="main-content" tabindex="-1">
       <div class="container"></div>
     </main>
 
