@@ -161,13 +161,29 @@
         <!-- Hit man hoppar med linken -->
         <main id="main-content" tabindex="-1">
             <section class="kundservice">
-                <h1>Kundservice</h1>
-
-                <div class="container"></div>
+                <section class="kundservice-hero">
+                    <div class="hero-text">
+                        <h1>Kundservice</h1>
+                        <p>
+                            Har du frågor om ditt medlemskap, din betalning
+                            eller din träning? Vårt kundserviceteam finns här
+                            för dig varje dag. Börja gärna med att titta bland
+                            de vanligaste frågorna nedan, så hittar du ofta
+                            svaret direkt. Annars når du oss via e-post eller
+                            telefon, så hjälper vi dig vidare.
+                        </p>
+                    </div>
+                    <article class="hero-bild">
+                        <img
+                            src="images/kundservice-bild.webp"
+                            alt="Receptionist med headset i ett rödbelyst gym"
+                        />
+                    </article>
+                </section>
 
                 <h2>Vanliga frågor</h2>
 
-                <!--Bootstrap kod för expand/collapse (inte färdigt)-->
+                <!--Bootstrap kod för expand/collapse -->
                 <div class="accordion" id="faq">
                     <div class="accordion-item">
                         <h3 class="accordion-header">
@@ -248,15 +264,15 @@
                                 class="accordion-button collapsed"
                                 type="button"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree"
+                                data-bs-target="#autogiro"
                                 aria-expanded="false"
-                                aria-controls="collapseThree"
+                                aria-controls="autogiro"
                             >
                                 Hur byter jag kontonummer för autogiro?
                             </button>
                         </h3>
                         <div
-                            id="collapseThree"
+                            id="autogiro"
                             class="accordion-collapse collapse"
                             data-bs-parent="#faq"
                         >
