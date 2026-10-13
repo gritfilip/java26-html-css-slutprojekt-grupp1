@@ -730,3 +730,8 @@ dessa är till för minskad rörelse */
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.kundservice {
+    padding: var(--padding);
+
+}
