@@ -271,6 +271,10 @@ strong {
     color: var(--text);
 }
 
+.gym-cardtext a:hover {
+    text-decoration: underline;
+}
+
 .gym-text {
     padding-top: var(--padding);
     text-align: center;
