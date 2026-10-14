@@ -49,17 +49,6 @@
                             alt="Grit Lyftarna logo"
                         />Grit Lyftarna</a
                     >
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
 
                     <!-- Bootstrap dark/light mode -->
                     <div
@@ -106,6 +95,17 @@
                             ><i data-feather="monitor"></i
                         ></label>
                     </div>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <!-- Här också, jag la till ms-auto -->
@@ -160,115 +160,144 @@
 
         <!-- Hit man hoppar med linken -->
         <main id="main-content" tabindex="-1">
-            <div class="container"></div>
+            <section class="kundservice">
+                <section class="kundservice-hero">
+                    <div class="hero-text">
+                        <h1>Kundservice</h1>
+                        <p>
+                            Har du frågor om ditt medlemskap, din betalning
+                            eller din träning? Vårt kundserviceteam finns här
+                            för dig varje dag. Börja gärna med att titta bland
+                            de vanligaste frågorna nedan, så hittar du ofta
+                            svaret direkt. Annars når du oss via e-post eller
+                            telefon, så hjälper vi dig vidare.
+                        </p>
+                    </div>
+                    <article class="hero-bild">
+                        <img
+                            src="images/kundservice-bild.webp"
+                            alt="Receptionist med headset i ett rödbelyst gym"
+                        />
+                    </article>
+                </section>
+
+                <h2>Vanliga frågor</h2>
+
+                <!--Bootstrap kod för expand/collapse -->
+                <div class="accordion" id="faq">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#medlemspris"
+                                aria-expanded="true"
+                                aria-controls="medlemspris"
+                            >
+                                Varför har mitt medlemspris ökat?
+                            </button>
+                        </h3>
+                        <div
+                            id="medlemspris"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#faq"
+                        >
+                            <div class="accordion-body">
+                                <strong
+                                    >1. Prisjustering för att ligga i linje med
+                                    dagens listpriser</strong
+                                >
+                                För medlemmar med priser som ligger långt under
+                                våra nuvarande listpriser kommer vi att justera
+                                medlemsavgiften. Detta hjälper oss att
+                                säkerställa rättvisa priser och bibehålla
+                                kvaliteten på vårt träningserbjudande. Du kommer
+                                alltid att bli informerad via e-post om detta
+                                gäller dig. <br />
+                                <strong>2. Inflationsjustering</strong> Priserna
+                                kan också justeras på grund av förändringar i
+                                konsumentprisindex (KPI), vilket är ett sätt att
+                                mäta inflation i Sverige. Inflation innebär att
+                                priserna på varor och tjänster stiger över tid.
+                                Justeringen säkerställer att vi kan täcka ökade
+                                kostnader kopplade till drift och utveckling av
+                                våra tjänster. Det nya beloppet kommer att
+                                framgå av din månadsfaktura.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#friskvard"
+                                aria-expanded="false"
+                                aria-controls="friskvard"
+                            >
+                                Jag har friskvårdsbidrag, hur fungerar det?
+                            </button>
+                        </h3>
+                        <div
+                            id="friskvard"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faq"
+                        >
+                            <div class="accordion-body">
+                                <strong>Friskvårdsbidrag</strong> Många
+                                arbetsgivare erbjuder idag friskvårdsbidrag via
+                                olika leverantörer som går att nyttja inom vår
+                                verksamhet, börja med att kolla av med din
+                                arbetsgivare vad du har för alternativ. Antingen
+                                kan medlemskapet tecknas via en
+                                friskvårdsportal, alternativt på plats i en
+                                reception. Fråga din arbetsgivare hur just Ditt
+                                friskvårdsbidrag kan nyttjas!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#autogiro"
+                                aria-expanded="false"
+                                aria-controls="autogiro"
+                            >
+                                Hur byter jag kontonummer för autogiro?
+                            </button>
+                        </h3>
+                        <div
+                            id="autogiro"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faq"
+                        >
+                            <div class="accordion-body">
+                                <strong>Autogiro</strong>
+                                Vid byte av kontonummer behöver du lämna dina
+                                nya kontouppgifter på plats på din klubb eller
+                                via Kundservice. Uppläggning av autogiro för
+                                första gången måste ske via reception eller
+                                online vid tecknande av medlemskap då vi kräver
+                                signatur och legitimation. Vid byte av
+                                kontonummer observera att det måste vara ditt
+                                personkonto/lönekonto skrivet i ditt egna
+                                personnummer. Om någon annan eller ett
+                                företagskonto skall betala månadsvis för ditt
+                                abonnemang behöver ändring av kontonummer ske
+                                via en bemannad reception. För att registrera
+                                ett företagskonto krävs fullmakt. Underlag för
+                                fullmakt finnes via reception.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <!--Bootstrap kod för expand/collapse (inte färdigt)-->
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button
-                        class="accordion-button"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                    >
-                        Varför har mitt medlemspris ökat?
-                    </button>
-                </h2>
-                <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    data-bs-parent="#accordionExample"
-                >
-                    <div class="accordion-body">
-                        <strong
-                            >1. Prisjustering för att ligga i linje med dagens
-                            listpriser</strong
-                        >
-                        För medlemmar med priser som ligger långt under våra
-                        nuvarande listpriser kommer vi att justera
-                        medlemsavgiften. Detta hjälper oss att säkerställa
-                        rättvisa priser och bibehålla kvaliteten på vårt
-                        träningserbjudande. Du kommer alltid att bli informerad
-                        via e-post om detta gäller dig. <br />
-                        <strong>2. Inflationsjustering</strong> Priserna kan
-                        också justeras på grund av förändringar i
-                        konsumentprisindex (KPI), vilket är ett sätt att mäta
-                        inflation i Sverige. Inflation innebär att priserna på
-                        varor och tjänster stiger över tid. Justeringen
-                        säkerställer att vi kan täcka ökade kostnader kopplade
-                        till drift och utveckling av våra tjänster. Det nya
-                        beloppet kommer att framgå av din månadsfaktura.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                    >
-                        Jag har friskvårdsbidrag, hur fungerar det?
-                    </button>
-                </h2>
-                <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#accordionExample"
-                >
-                    <div class="accordion-body">
-                        <strong>Friskvårdsbidrag.</strong> Många arbetsgivare
-                        erbjuder idag friskvårdsbidrag via olika leverantörer
-                        som går att nyttja inom vår verksamhet, börja med att
-                        kolla av med din arbetsgivare vad du har för alternativ.
-                        Antingen kan medlemskapet tecknas via en
-                        friskvårdsportal, alternativt på plats i en reception.
-                        Fråga din arbetsgivare hur just Ditt friskvårdsbidrag
-                        kan nyttjas!
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                    >
-                        Accordion Item #3
-                    </button>
-                </h2>
-                <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#accordionExample"
-                >
-                    <div class="accordion-body">
-                        <strong
-                            >This is the third item’s accordion body.</strong
-                        >
-                        It is hidden by default, until the collapse plugin adds
-                        the appropriate classes that we use to style each
-                        element. These classes control the overall appearance,
-                        as well as the showing and hiding via CSS transitions.
-                        You can modify any of this with custom CSS or overriding
-                        our default variables. It’s also worth noting that just
-                        about any HTML can go within the
-                        <code>.accordion-body</code>, though the transition does
-                        limit overflow.
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <footer>
             <div class="container">
