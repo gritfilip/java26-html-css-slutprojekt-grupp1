@@ -581,6 +581,29 @@ footer h2 {
 }
 
 
+/* grid för korten till gymmet */
+.maskin-grid {
+    
+    
+    display: grid; 
+    gap: var(--padding);
+    padding: var(--padding);
+    grid-template-columns: 1fr;
+
+}
+
+/* bildernas storlek i maskin grid */
+.maskin-grid img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+
+
 /* Ligger kategorier här, bara stapla in i dem
 dessa är till för minskad rörelse */
 @media (prefers-reduced-motion: reduce) {
@@ -716,6 +739,11 @@ dessa är till för minskad rörelse */
     /* Korten läggs bredvid varandra */
     .gym-container {
         grid-template-columns: repeat(4, 1fr);
+             
+    }
+ /* Gymmet: maskinkorten i tre kolumner */
+    .maskin-grid {
+        grid-template-columns: repeat(3, 1fr);    
     }
 
 /* Tre kolumner på desktop */
@@ -772,3 +800,7 @@ dessa är till för minskad rörelse */
 
 }
 
+/* padding för h1 och p taggar i gymmet */
+.gymmet {
+    padding: var(--padding);
+}

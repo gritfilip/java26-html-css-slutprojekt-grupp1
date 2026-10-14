@@ -1,98 +1,54 @@
 <!doctype html>
 <html lang="sv" data-bs-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- För sökresultat på tex. google-->
-    <meta
-      name="description"
-      content="Utforska Grit Lyftarnas gym och upptäck våra träningsytor, maskiner och utrustning."
-    />
-    <meta
-      name="keywords"
-      content="Grit Lyftarna, gym, träning, fitness, styrketräning, medlemskap"
-    />
+        <!-- För sökresultat på tex. google-->
+        <meta
+            name="description"
+            content="Utforska Grit Lyftarnas gym och upptäck våra träningsytor, maskiner och utrustning."
+        />
+        <meta
+            name="keywords"
+            content="Grit Lyftarna, gym, träning, fitness, styrketräning, medlemskap"
+        />
 
-    <title>Grit Lyftarna │ Gymmet</title>
+        <title>Grit Lyftarna │ Gymmet</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/GritLogo.png" />
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/GritLogo.png" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <!-- Våran CSS -->
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <!-- Våran CSS -->
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
 
-  <body>
-    <!-- Link för at kunna hoppa till main-->
-    <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
-    <!-- Navbar importerad ifrån Bootstrap-->
-    <header>
-      <!-- navbar-expand-xl gör att hamburgermenyn visas under 1200px.
+    <body>
+        <!-- Link för at kunna hoppa till main-->
+        <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
+        <!-- Navbar importerad ifrån Bootstrap-->
+        <header>
+            <!-- navbar-expand-xl gör att hamburgermenyn visas under 1200px.
      Jag ändrade från lg (992px) till xl (1200px) eftersom våra länkar
      inte fick plats på mindre skärmar och började staplas på varandra. -->
-      <nav class="navbar navbar-expand-xl">
-        <!-- har ändrat bootstraps "container-fluid", jag la in px-5. Dem har egna css regler man kan skriva direkt in här-->
-        <!-- https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
-        <!-- px-5 ger padding på vänster och höger sida -->
-        <div class="container-fluid px-5">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/GritLogo.png" alt="Grit Lyftarna logo" />Grit
-            Lyftarna</a
-          >
-
-          <!-- Bootstrap dark/light mode -->
-          <div
-            class="btn-group"
-            role="group"
-            aria-label="Välj mörkt eller ljust läge"
-          >
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio1"
-              data-bs-theme-value="dark"
-              aria-label="Mörkt läge"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btnradio1"
-              ><i data-feather="moon"></i
-            ></label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio2"
-              data-bs-theme-value="light"
-              aria-label="Ljust läge"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btnradio2"
-              ><i data-feather="sun"></i
-            ></label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="btnradio"
-              id="btnradio3"
-              data-bs-theme-value="auto"
-              aria-label="System läge"
-              autocomplete="off"
-            />
-            <label class="btn btn-outline-primary" for="btnradio3"
-              ><i data-feather="monitor"></i
-            ></label>
-          </div>
+            <nav class="navbar navbar-expand-xl">
+                <!-- har ändrat bootstraps "container-fluid", jag la in px-5. Dem har egna css regler man kan skriva direkt in här-->
+                <!-- https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
+                <!-- px-5 ger padding på vänster och höger sida -->
+                <div class="container-fluid px-5">
+                    <a class="navbar-brand" href="index.html">
+                        <img
+                            src="images/GritLogo.png"
+                            alt="Grit Lyftarna logo"
+                        />Grit Lyftarna</a
+                    >
 
           <button
             class="navbar-toggler"
@@ -166,38 +122,240 @@
               <a href="https://www.facebook.com" target="_blank"
                 ><img src="images/Facebook_Logo.png" alt="facebook logo"
               /></a>
+                    <!-- Bootstrap dark/light mode -->
+                    <div
+                        class="btn-group"
+                        role="group"
+                        aria-label="Välj mörkt eller ljust läge"
+                    >
+                        <input
+                            type="radio"
+                            class="btn-check"
+                            name="btnradio"
+                            id="btnradio1"
+                            data-bs-theme-value="dark"
+                            aria-label="Mörkt läge"
+                            autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="btnradio1"
+                            ><i data-feather="moon"></i
+                        ></label>
+
+                        <input
+                            type="radio"
+                            class="btn-check"
+                            name="btnradio"
+                            id="btnradio2"
+                            data-bs-theme-value="light"
+                            aria-label="Ljust läge"
+                            autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="btnradio2"
+                            ><i data-feather="sun"></i
+                        ></label>
+
+                        <input
+                            type="radio"
+                            class="btn-check"
+                            name="btnradio"
+                            id="btnradio3"
+                            data-bs-theme-value="auto"
+                            aria-label="System läge"
+                            autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="btnradio3"
+                            ><i data-feather="monitor"></i
+                        ></label>
+                    </div>
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <!-- Här också, jag la till ms-auto -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Hem</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="medlemskap.html"
+                                    >Medlemskap</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="gymmet.html"
+                                    >Gymmet</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="tjänster.html"
+                                    >Tjänster</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="kundservice.html"
+                                    >Kundservice</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="teamet.html"
+                                    >Teamet</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="jobba.html"
+                                    >Jobba hos oss</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Hit man hoppar med linken -->
+        <main id="main-content" tabindex="-1">
+
+            <section class="gymmet">
+
+            <h1>Gymmet: träna på dina villkor</h1>
+                <p>
+                    Hos oss hittar du allt från tunga skivstänger till moderna maskiner, i en miljö som får dig att vilja träna.
+                </p>
+                <p>
+                     Känner du dig osäker på hur en maskin fungerar? Fråga någon i vår personal, de hjälper dig gärna.
+                </p>
+                <p>
+                     Vill du ha en träningsplan som passar just dina mål kan du boka en personlig tränare i receptionen.
+                </p>
+
+                <h2>Våra maskiner</h2>
+                </section>
+            
+            <!--box för maskinkorten-->
+           <div class="maskin-grid">
+            <!--Bootstrap "kort/card" för gym bilder/maskiner och övningar-->
+            <div class="card">
+                <img src="images/benchpress.webp" class="card-img-top" alt="bänkpress med vikter i röda gymmet" />
+                <div class="card-body">
+                  <h3 class="card-title">Bänkpress</h3>
+                    <p class="card-text">
+                        Perfekt för bröst, axlar och armar. Justera bänken efter din längd, ha alltid skyddsstopp på stången och be gärna någon spotta när du kör tungt.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/flyes-machine.webp" class="card-img-top" alt="flyes maskin mitt i röda gymmet" />
+                <div class="card-body">
+                  <h3 class="card-title">Flyes Maskin</h3>
+                    <p class="card-text">
+                        Isolerar bröstmusklerna med en kontrollerad rörelse. Ställ in sätet så att handtagen hamnar i brösthöjd, och för armarna framåt utan att låsa armbågarna.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/free-weights.webp" class="card-img-top" alt="fria vikter i röda gymmet" />
+                <div class="card-body">
+                  <h3 class="card-title">Fria Vikter</h3>
+                    <p class="card-text">
+                        Hantlar och skivstänger för dig som vill bygga styrka med fria rörelser. Börja med lätta vikter för att lära dig tekniken och lägg tillbaka allt på sin plats efter passet.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/treadmill.webp" class="card-img-top" alt="Löpband med rött ljus" />
+                <div class="card-body">
+                  <h3 class="card-title">Löpband</h3>
+                    <p class="card-text">
+                        Värm upp, bygg kondition eller kör intervaller. Starta på låg hastighet, håll dig i mitten av bandet och använd säkerhetssnöret.
+                    </p>
+                </div>
+            </div>
+             <div class="card">
+                <img src="images/legpress.webp" class="card-img-top" alt="röd ljus med benpress" />
+                <div class="card-body">
+                  <h3 class="card-title">Benpress</h3>
+                    <p class="card-text">
+                        Ett tryggt sätt att träna ben och rumpa med tunga vikter. Placera fötterna i axelbredd och tryck genom hälarna, men lås inte knäna i toppläget.
+                    </p>
+                </div>
             </div>
           </div>
 
-          <div class="footer-contact">
-            <h3>Kontakta oss!</h3>
-            <a href="mailto:gritlyftarna@gritacademy.se"
-              >gritlyftarna@gritacademy.se</a
-            >
-            <a href="tel:+0401337">040-1337</a>
-          </div>
+        </main>
 
-          <div class="footer-openhours">
-            <h3>Öppetider</h3>
-            <p>Söndag - Fredag: 05:00 - 22:00</p>
-            <p>Lördag: 05:00 - 24:00</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+        <footer>
+            <div class="container">
+                <div class="footer-brand">
+                    <img src="images/GritLogo.png" alt="Grit Lyftarna logo" />
+                    <h2>Grit Lyftarna</h2>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-socials">
+                        <h3>Hitta oss på våra sociala medier!</h3>
+                        <div class="social-icon">
+                            <a href="https://www.instagram.com" target="_blank"
+                                ><img
+                                    src="images/instagram-logo.png.webp"
+                                    alt="instagram logo"
+                            /></a>
+                            <a href="https://www.facebook.com" target="_blank"
+                                ><img
+                                    src="images/Facebook_Logo.png"
+                                    alt="facebook logo"
+                            /></a>
+                        </div>
+                    </div>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Bootstrap JS för Dark/Light mode-->
-    <script src="js/bootstrap-color-mode.js"></script>
-    <!-- Script för feather ikoner till Dark/Light -->
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script>
-      feather.replace();
-    </script>
-  </body>
+                    <div class="footer-contact">
+                        <h3>Kontakta oss!</h3>
+                        <a href="mailto:gritlyftarna@gritacademy.se"
+                            >gritlyftarna@gritacademy.se</a
+                        >
+                        <a href="tel:+0401337">040-1337</a>
+                    </div>
+
+                    <div class="footer-openhours">
+                        <h3>Öppetider</h3>
+                        <p>Söndag - Fredag: 05:00 - 22:00</p>
+                        <p>Lördag: 05:00 - 24:00</p>
+                    </div>
+                </div>
+            </div>
+            </div> 
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Bootstrap JS för Dark/Light mode-->
+        <script src="js/bootstrap-color-mode.js"></script>
+        <!-- Script för feather ikoner till Dark/Light -->
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script>
+            feather.replace();
+        </script>
+    </body>
 </html>
