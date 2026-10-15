@@ -28,6 +28,15 @@
     />
     <!-- Våran CSS -->
     <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      .service-card {
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .service-card:hover {
+        transform: scale(1.05);
+      }
+    </style>
   </head>
 
   <body>
@@ -167,7 +176,7 @@
           </div>
           <div class="row g-4">
             <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 shadow-sm rounded-4">
+              <article class="card h-100 border-0 shadow-sm rounded-4 service-card">
                 <div class="card-body p-4">
                   <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary p-3 mb-3" aria-hidden="true">
                     <i data-feather="user"></i>
@@ -181,7 +190,7 @@
               </article>
             </div>
             <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 shadow-sm rounded-4">
+              <article class="card h-100 border-0 shadow-sm rounded-4 service-card">
                 <div class="card-body p-4">
                   <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary p-3 mb-3" aria-hidden="true">
                     <i data-feather="users"></i>
@@ -195,7 +204,7 @@
               </article>
             </div>
             <div class="col-md-6 col-lg-4">
-              <article class="card h-100 border-0 shadow-sm rounded-4">
+              <article class="card h-100 border-0 shadow-sm rounded-4 service-card">
                 <div class="card-body p-4">
                   <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary p-3 mb-3" aria-hidden="true">
                     <i data-feather="activity"></i>
