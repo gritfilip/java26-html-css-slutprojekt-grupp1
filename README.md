@@ -52,6 +52,8 @@ Ikoner från Feather Icons: https://feathericons.com/
 
 Kända problem:
 
+Tydligen har MAC och PC olika åäö. Dök upp problem med detta och fick döpa om bilder.
+
 Tillgänglighetstester:
 
 Har testat tillgängligheten på index.html och teamet.html.
