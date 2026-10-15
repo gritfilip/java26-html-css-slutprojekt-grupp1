@@ -70,12 +70,4 @@ Minskad rörelse: Har lagt till reduced motion och testat med Chrome Devtools. A
 
 Sponsorslidern: Vid minskad rörelse visas bilderna som vanliga bilder istället för att röra sig.
 
-Bilder: Har använt <picture> på teamet-sidan för att anpassa bilderna efter skärmstorleken. Vid ändring från mobile till tablet och uppåt kommer en annan bild.
-
-Projektuppdatering: Design och HTML-struktur för gymwebbplats
-
-Arbetet med gymwebbplatsen har tagit ett stort kliv framåt. Jag har nyligen färdigställt en första skiss som sätter den visuella ramen och layouten för hela projektet. Fokus i skissen har varit att skapa en modern, energifylld och användarvänlig känsla som uppmuntrar besökaren att utforska vårt träningsutbud.
-
-Utifrån skissen har jag påbörjat det praktiska kodningsarbetet och gjort strukturella ändringar på flera av HTML-sidorna. Bland annat har navigationsmenyn uppdaterats för att göra det enklare att hitta till schemat för gruppträning, medlemsvillkor och kontaktsida. Rubriker, textblock och sektioner för bilder har optimerats för att säkerställa god tillgänglighet och en tydlig informationshierarki.
-
-Nästa steg i utvecklingen blir att förfina CSS-stylingen för att matcha skissens färger och typografi exakt, samt att säkerställa att sidorna är helt responsiva och fungerar sömlöst på både mobiler och datorer. 
+Bilder: Har använt <picture> på teamet-sidan för att anpassa bilderna efter skärmstorleken. Vid ändring från mobile till tablet och uppåt kommer en annan bild. 
