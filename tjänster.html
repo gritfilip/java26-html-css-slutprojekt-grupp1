@@ -35,10 +35,12 @@
     <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
     <!-- Navbar importerad ifrån Bootstrap-->
     <header>
+
       <!-- navbar-expand-xl gör att hamburgermenyn visas under 1200px.
      Jag ändrade från lg (992px) till xl (1200px) eftersom våra länkar
      inte fick plats på mindre skärmar och började staplas på varandra. -->
       <nav class="navbar navbar-expand-xl">
+
         <!-- har ändrat bootstraps "container-fluid", jag la in px-5. Dem har egna css regler man kan skriva direkt in här-->
         <!-- https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
         <!-- px-5 ger padding på vänster och höger sida -->
@@ -106,6 +108,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
+
             <!-- Här också, jag la till ms-auto -->
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
@@ -147,7 +150,73 @@
     </header>
     <!-- Hit man hoppar med linken -->
     <main id="main-content" tabindex="-1">
-      <div class="container"></div>
+      <div class="container py-5">
+        <section class="rounded-4 bg-body-tertiary p-4 p-md-5 text-center mb-5" aria-labelledby="services-heading">
+          <p class="text-uppercase text-primary fw-bold mb-2">Grit Lyftarna</p>
+          <h1 id="services-heading" class="display-5 fw-bold mb-3">Träning som passar dig</h1>
+          <p class="lead text-body-secondary mx-auto mb-0" style="max-width: 42rem">
+            Hitta motivationen, utvecklas i din egen takt och få stöd på vägen
+            mot dina träningsmål.
+          </p>
+        </section>
+
+        <section aria-labelledby="offerings-heading">
+          <div class="text-center mb-4">
+            <h2 id="offerings-heading" class="h3 fw-bold">Våra tjänster</h2>
+            <p class="text-body-secondary">Välj det upplägg som känns rätt för dig.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <article class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                  <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary p-3 mb-3" aria-hidden="true">
+                    <i data-feather="user"></i>
+                  </span>
+                  <h3 class="h4 card-title fw-bold">Personlig träning</h3>
+                  <p class="card-text text-body-secondary">
+                    Få personlig coachning och ett träningsupplägg anpassat efter
+                    dina mål och förutsättningar.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                  <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary p-3 mb-3" aria-hidden="true">
+                    <i data-feather="users"></i>
+                  </span>
+                  <h3 class="h4 card-title fw-bold">Gruppträning</h3>
+                  <p class="card-text text-body-secondary">
+                    Träna tillsammans med andra och hitta nya favoriter bland
+                    pass med olika fokus och intensitet.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card h-100 border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                  <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary p-3 mb-3" aria-hidden="true">
+                    <i data-feather="activity"></i>
+                  </span>
+                  <h3 class="h4 card-title fw-bold">Egen träning</h3>
+                  <p class="card-text text-body-secondary">
+                    Använd gymmets utrustning för styrke- och konditionsträning
+                    när det passar dig.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="text-center rounded-4 bg-body-tertiary p-4 p-md-5 mt-5" aria-labelledby="membership-heading">
+          <h2 id="membership-heading" class="h3 fw-bold">Kom igång med din träning</h2>
+          <p class="text-body-secondary mb-4">Upptäck medlemskapet som passar dina behov.</p>
+          <a class="btn btn-primary btn-lg" href="medlemskap.html">Se våra medlemskap</a>
+        </section>
+      </div>
     </main>
 
     <footer>
@@ -192,8 +261,10 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    
     <!-- Bootstrap JS för Dark/Light mode-->
     <script src="js/bootstrap-color-mode.js"></script>
+
     <!-- Script för feather ikoner till Dark/Light -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
