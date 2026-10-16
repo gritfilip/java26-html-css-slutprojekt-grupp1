@@ -102,7 +102,8 @@
 }
 
 .navbar .navbar-brand {
-    color: var(--gold);
+    color: var(--gold);   
+    letter-spacing: 1.5px;
 }
 
 .navbar-brand {
@@ -112,7 +113,7 @@
 }
 
 .navbar-brand:hover {
-    color: var(--gold);
+    text-decoration: underline;
 }
 
 .navbar-brand img {
@@ -128,32 +129,30 @@
 }
 
 /* Bootstraps, detta är radio knappen dark/light */
-.btn-outline-primary {
+.btn-group .btn-outline-primary {
     --bs-btn-color: #fff;
-    --bs-btn-border-color: #7d2428;
     --bs-btn-hover-color: #daa520;
     --bs-btn-hover-bg: #7d2428;
-    --bs-btn-hover-border-color: #7d2428;
-    --bs-btn-focus-shadow-rgb: 13, 110, 253;
     --bs-btn-active-color: #daa520;
     --bs-btn-active-bg: #7d2428;
-    --bs-btn-active-border-color: #7d2428;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #7d2428;
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: #7d2428;
-    --bs-gradient: none;
+
+    border: none;
+    transition: transform 0.2s;
 }
 
+.btn-group .btn-outline-primary:hover {
+    transform: scale(1.1);
+    color: var(--gold);
+}
 .skip-link {
     position: fixed;
     top: -100px;
     left: 10px;
     font-size: 1.5rem;
     z-index: 1000;
-     color: black;
-     padding: var(--padding);
-     background-color: var(--gold);
+    color: black;
+    padding: var(--padding);
+    background-color: var(--gold);
 }
 
 .skip-link:focus {
@@ -264,17 +263,19 @@ strong {
     text-align: center;
     color: var(--text);
     margin-top: 10px;
-    line-height: 2rem;
     letter-spacing: 0.2px;
 }
 
 .gym-cardtext a {
     text-decoration: none;
     color: var(--text);
+    transition: 0.5s;
+    letter-spacing: 0.5px;
 }
 
 .gym-cardtext a:hover {
     text-decoration: underline;
+    color: var(--red);
 }
 
 .gym-text {
@@ -290,6 +291,7 @@ strong {
 
 .gym-text h2 {
     font-size: 2.5rem;
+    letter-spacing: 1px;
 }
 
 .gym-card img {
@@ -318,7 +320,7 @@ strong {
     margin-top: 30px;
     color: var(--gold);
     text-decoration: underline;
-
+    letter-spacing: 0.5px;
 }
 
 /* Rutan till bilderna */
@@ -398,14 +400,14 @@ strong {
     text-align: center;
     border-radius: 25px;
     padding: 3px;
-    line-height: 2rem;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.5px;
 }
 
 .partner-info h3 {
     margin-top: 5px;
     font-size: 1.2rem;
     color: var(--gold);
+    letter-spacing: 0.5px;
 }
 
 /* Footer CSS, samma på alla sidor */
@@ -462,20 +464,24 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    letter-spacing: 0.5px;
 }
 
 footer h3 {
     font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 footer h2 {
     color: var(--red);
+    letter-spacing: 1px;
 }
 
 .footer-socials,
 .footer-contact,
 .footer-openhours {
     padding: 10px;
+    letter-spacing: 1px;
 }
 
 /* Teamet sidan */
@@ -492,6 +498,7 @@ footer h2 {
     margin-top: 20px;
     text-align: center;
     animation: pulse 3s ease-in-out infinite;
+    letter-spacing: 1px;
 }
 
 .team-container {
@@ -526,6 +533,7 @@ footer h2 {
     text-decoration: underline;
     font-size: 2rem;
     color: var(--red);
+    letter-spacing: 1px;
 }
 
 .team-cardtext {
@@ -548,6 +556,7 @@ footer h2 {
     width: fit-content;
     margin: auto;
     padding: 5px;
+    letter-spacing: 1.5px;
 }
 
 .team-cardtext a img {
@@ -579,6 +588,7 @@ footer h2 {
     color: var(--gold);
     transform: scale(1.5);
 }
+
 /* storlek och plats för bild/text i hero delen i kundservice */
 .kundservice-hero {
     display: flex;
@@ -814,4 +824,41 @@ dessa är till för minskad rörelse */
 /* padding för h1 och p taggar i gymmet */
 .gymmet {
     padding: var(--padding);
+}
+
+.gymmet h1 {
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.gymmet h2 {
+    letter-spacing: 1px;
+}
+
+.gymmet p {
+    letter-spacing: 0.3px;
+}
+
+.card-title {
+    letter-spacing: 1px;
+}
+
+.card-text {
+    letter-spacing: 0.3px;
+    line-height: 1.5rem;
+}
+
+.hero-text h1 {
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.hero-text p {
+    letter-spacing: 0.3px;
+    line-height: 1.5rem;
+}
+
+.accordion-body {
+    letter-spacing: 0.5px;
+    line-height: 1.5rem;
 }
