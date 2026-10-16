@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+*:focus-visible {
+    outline: 5px solid blue;
+    outline-offset: 5px;
+}
+
 /* Färger vi kan använda på sidan, jag har bara gjort några jag ville ha nu så lägg gärna på, kom inte på några bra namn */
 :root {
     --padding: 20px;
@@ -267,14 +272,14 @@ strong {
 }
 
 .gym-cardtext a {
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--red);
     color: var(--text);
     transition: 0.5s;
     letter-spacing: 0.5px;
 }
 
 .gym-cardtext a:hover {
-    text-decoration: underline;
     color: var(--red);
 }
 
@@ -656,7 +661,9 @@ dessa är till för minskad rörelse */
     .team-card:hover>img,
     .team-card a img:hover,
     .social-icon img:hover,
-    .team-cardtext a:hover .feather {
+    .team-cardtext a:hover .feather,
+    .navbar-brand img:hover,
+    .btn-group .btn-outline-primary:hover {
         transform: none;
     }
 
@@ -664,7 +671,13 @@ dessa är till för minskad rörelse */
     .home-buttons a,
     .team-card>img,
     .team-cardtext a img,
-    .social-icon img {
+    .social-icon img,
+    .navbar .nav-link,
+    .navbar-brand,
+    .navbar-brand img,
+    .btn-group .btn-outline-primary,
+    .gym-cardtext a,
+    .footer-contact a {
         transition: none;
     }
 
@@ -800,13 +813,13 @@ dessa är till för minskad rörelse */
     }
 
     .hero-text {
-        flex: 1
-        var(--padding)
+        flex: 1;
+        padding: var(--padding);
     }
 
     .hero-bild{
-        flex: 2
-        var(--padding)
+        flex: 2;
+        padding: var(--padding);
     }
 }
  /*padding för text i kundservice*/
