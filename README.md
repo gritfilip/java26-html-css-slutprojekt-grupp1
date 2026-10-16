@@ -14,8 +14,10 @@ Gruppmedlemmar:
 
 Länkar:
 
-GitHub Pages:
+GitHub Pages:https://gritfilip.github.io/java26-html-css-slutprojekt-grupp1/
+
 GitHub: https://github.com/gritfilip/java26-html-css-slutprojekt-grupp1
+
 Kanban: https://github.com/users/gritfilip/projects/4
 
 Skisser och inspiration:
@@ -65,6 +67,7 @@ Hoppa till innehåll: Har skapat en "skip-link" som är det första som kommer f
 150 % zoom: Har testat båda sidorna och allt går fortfarande att läsa och använda.
 
 Kontrast: Testat med Chrome Devtools i både dark mode och light mode. Fick ändra några röda och guldfärgade färger för att klara contrast ratio enligt WCAG AA.
+
 https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html
 https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
 
