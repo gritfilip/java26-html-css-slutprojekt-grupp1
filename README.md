@@ -83,4 +83,8 @@ Arbetet med gymwebbplatsen har tagit ett stort kliv framåt. Jag har nyligen fä
 
 Utifrån skissen har jag påbörjat det praktiska kodningsarbetet och gjort strukturella ändringar på flera av HTML-sidorna. Bland annat har navigationsmenyn uppdaterats för att göra det enklare att hitta till schemat för gruppträning, medlemsvillkor och kontaktsida. Rubriker, textblock och sektioner för bilder har optimerats för att säkerställa god tillgänglighet och en tydlig informationshierarki.
 
-Nästa steg i utvecklingen blir att förfina CSS-stylingen för att matcha skissens färger och typografi exakt, samt att säkerställa att sidorna är helt responsiva och fungerar sömlöst på både mobiler och datorer. 
+Nästa steg i utvecklingen blir att förfina CSS-stylingen för att matcha skissens färger och typografi exakt, samt att säkerställa att sidorna är helt responsiva och fungerar sömlöst på både mobiler och datorer.
+
+Design och skisser
+## Design och skisser
+[Klicka här för att se vår Figma-skiss](https://www.figma.com/design/1IMrCT3wQvLw1WehiA3WTG/Untitled?node-id=0-1&t=v2fQ7vdu9hxXjKOR-1)
